@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
-import { AirVent, History, UtensilsCrossed } from 'lucide-react';
+import React from 'react'
 
-const truncateText = (text, length) => {
-  return text.length > length ? `${text.substring(0, length)}...` : text;
-};
-
-const Details = ({ state, onClose }) => {
-
-  const [showMore, setShowMore] = useState({
-    about: false,
-    climate: false,
-    history: false,
-    food: false,
-  });
-
-  const handleShowMoreToggle = (section) => {
-    setShowMore((prev) => ({ ...prev, [section]: !prev[section] }));
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+const Details = ({state}) => {
   return (
-    <div className="fixed inset-0 flex justify-center items-start bg-white bg-opacity-50 p-4 z-50 overflow-auto">
-      <div className="bg-white max-h-full p-4 md:p-6 lg:p-10 lg:w-[75rem] shadow-lg rounded-lg w-11/12 md:w-3/4 relative mt-4">
+    <div>
+       <div className="fixed inset-0 flex justify-center items-start bg-white bg-opacity-50 p-4 z-50 overflow-auto">
+      <div
+        id="details-modal"
+        className="bg-white max-h-screen p-4 md:p-6 lg:p-10 lg:w-[75rem] shadow-lg rounded-lg w-11/12 md:w-3/4 relative mt-4"
+        style={{ top: 0 }}
+      >
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
@@ -33,7 +16,7 @@ const Details = ({ state, onClose }) => {
           <X size={24} />
         </button>
         <div className="p-4 md:p-6 overflow-y-auto max-h-[80vh]">
-          <div className="flex flex-col lg:flex-row md:flex-col items-center mb-4 gap-4">
+          <div className="flex flex-col lg:flex-row md:flex-row md:flex-col items-center mb-4 gap-4">
             <img
               className="h-40 w-50 rounded-full object-cover object-center"
               src={state.img[0]}
@@ -94,7 +77,7 @@ const Details = ({ state, onClose }) => {
           <h1 className='mt-8 text-2xl md:text-3xl lg:text-4xl'>What the State Produces</h1>
           <div className="places grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
             {state?.products?.map((product) => (
-              <div key={product.name} className="flex flex-col items-center rounded-lg p-4">
+              <div key={product.name} className="card flex flex-col items-center rounded-lg p-4 bg-white shadow-lg">
                 <img src={product.image} alt={product.name} className="object-cover object-center w-16 h-16 md:w-20 md:h-20 rounded-full mb-2" />
                 <p className="text-center text-gray-700">{product.name}</p>
                 <p className="text-center text-sm text-gray-500">{product.category}</p>
@@ -117,7 +100,7 @@ const Details = ({ state, onClose }) => {
                       {showMore[place.name] ? 'Show less' : 'more...'}
                     </button>
                   </p>
-                  <a href={place.location} target="_blank" rel="noopener noreferrer" className="text-pink-500 text-sm">View on map</a>
+                  <a href={place.location} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-sm">View on map</a>
                 </div>
               ))}
             </div>
@@ -125,7 +108,8 @@ const Details = ({ state, onClose }) => {
         </div>
       </div>
     </div>
+    </div>
   )
 }
 
-export default Details;
+export default Details
