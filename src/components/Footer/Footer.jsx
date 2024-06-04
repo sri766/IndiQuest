@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="bg-gray-900">
         <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src="/logo.jpg" alt="LOGO" className='w-[70px]'/>
+            <img src="/mandala.png" alt="LOGO" className='w-[70px]'/>
             <span className="ml-3 text-xl text-white">IndiQuest</span>
         </a>
         <p className="text-md text-white sm:ml-6 sm:mt-0 mt-4">© 2024 IndiQuest —
