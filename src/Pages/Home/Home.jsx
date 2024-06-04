@@ -7,7 +7,6 @@ import CarouselWithContent from '../../components/Carousal/CarouselWithContent'
 
 const Home = () => {
 
-  
   return (
     <div>
       <Hero />

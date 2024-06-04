@@ -12,7 +12,12 @@ module.exports = withMT({
     fontFamily: {
       'textFont':[ 'Outfit', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      color: {
+        "baseBlue": "#01204E",
+      }
+    },
+
   },
   plugins: [
     require('flowbite/plugin')
