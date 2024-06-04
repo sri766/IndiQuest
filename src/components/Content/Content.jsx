@@ -1,7 +1,85 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { ArrowRight } from 'lucide-react'
+import Shepherd from 'shepherd.js'
+import 'shepherd.js/dist/css/shepherd.css';
 
 const content = () => {
+    useEffect(() => {
+        const tour = new Shepherd.Tour({
+          defaultStepOptions: {
+            cancelIcon: {
+              enabled: true
+            },
+            classes: 'class-1 class-2',
+            scrollTo: { behavior: 'smooth', block: 'center' }
+          },
+          useModalOverlay: true,
+        });
+    
+        const steps = [
+          {
+            id: 'destination-guides',
+            text: 'Learn more about Destination Guides.',
+            attachTo: {
+              element: '.destination-guides',
+              on: 'right'
+            },
+            buttons: [
+              {
+                text: 'Next',
+                action: tour.next
+              }
+            ]
+          },
+          {
+            id: 'travel-tips',
+            text: 'Here are some travel tips for you.',
+            attachTo: {
+              element: '.travel-tips',
+              on: 'right'
+            },
+            buttons: [
+              {
+                text: 'Next',
+                action: tour.next
+              }
+            ]
+          },
+          {
+            id: 'cultural-insights',
+            text: 'Discover the cultural insights of India.',
+            attachTo: {
+              element: '.cultural-insights',
+              on: 'right'
+            },
+            buttons: [
+              {
+                text: 'Finish',
+                action: tour.complete
+              }
+            ]
+          }
+        ];
+    
+        // Add steps to the tour
+        steps.forEach(step => {
+          tour.addStep(step);
+        });
+    
+        // Remove previous step before showing the next step
+        tour.on('before-show', (event) => {
+          const currentStepIndex = steps.findIndex(step => step.id === event.id);
+          if (currentStepIndex > 0) {
+            const previousStep = tour.getById(steps[currentStepIndex - 1].id);
+            if (previousStep) {
+              tour.removeStep(previousStep.id);
+            }
+          }
+        });
+    
+        // Start the tour
+        tour.start();
+      }, []);
   return (
     <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">

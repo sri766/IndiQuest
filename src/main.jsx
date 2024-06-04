@@ -7,11 +7,9 @@ import CustomFontComponent from './components/Font/Font.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <BrowserRouter>
     <CustomFontComponent>
       <App />
     </CustomFontComponent>
     </BrowserRouter>
-  </React.StrictMode>,
 )

@@ -10,6 +10,7 @@ import Designer from './components/Design/Designer'
 //react-router
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
+import Flights from './Pages/Flights/Flights'
 function App() {
   
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/places" element={<Places />} />
+        <Route path="/flights" element={<Flights/>}/>
       </Routes>
       <Footer/>
     </>

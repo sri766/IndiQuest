@@ -1,9 +1,8 @@
 import React from 'react'
-import Shepherd from 'shepherd.js'
+
 
 const Hero = () => {
-
-
+  
   return (
     <section class="hero_section text-slate-900 bg-transparent bg-blur-sm body-font  cursor-pointer">
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
