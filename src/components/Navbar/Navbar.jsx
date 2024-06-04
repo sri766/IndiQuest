@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
 
-    <header class="text-slate-900 bg-transparent bg-blur-sm body-font rounded-full cursor-pointer">
+    <header class="sticky text-slate-900 bg-transparent body-font rounded-full cursor-pointer">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <nav class="flex lg:w-2/5 flex-wrap items-center text-lg md:ml-auto">
           <a class="home mr-5 hover:text-gray-500" onClick={()=>navigate('/')}>Home</a>
