@@ -8,7 +8,7 @@ import Navbar from './components/Navbar/Navbar'
 import Designer from './components/Design/Designer'
 
 //react-router
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter,Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import Flights from './Pages/Flights/Flights'
 
@@ -17,7 +17,7 @@ function App() {
 
 
   return (
-
+    <BrowserRouter>
     <div className='select-none'>
       <Navbar />
       <Designer />
@@ -28,8 +28,8 @@ function App() {
         <Route path="/flights" element={<Flights/>}/>
       </Routes>
       <Footer/>
-      
     </div>
+    </BrowserRouter>
   )
 }
 
