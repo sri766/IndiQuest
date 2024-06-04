@@ -11,11 +11,14 @@ import Designer from './components/Design/Designer'
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import Flights from './Pages/Flights/Flights'
+
+
 function App() {
-  
+
 
   return (
-    <>
+
+    <div className='select-none'>
       <Navbar />
       <Designer />
       <Routes>
@@ -25,7 +28,8 @@ function App() {
         <Route path="/flights" element={<Flights/>}/>
       </Routes>
       <Footer/>
-    </>
+      
+    </div>
   )
 }
 
