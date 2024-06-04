@@ -18,7 +18,7 @@ const Designer = () => {
   }, []);
 
   return (
-    <div className='w-full h-full absolute -left-1/3 bottom-0 -z-10 opacity-50'>
+    <div className='w-full h-full lg:inline-block absolute lg:-left-1/3 sm:-top-1/2 bottom-0 -z-10 lg:opacity-50 sm:opacity-20 sm:flex sm:justify-center sm:align-center'>
       <img ref={imageRef} src="/Designer.svg" alt="mandala" />
     </div>
   );
