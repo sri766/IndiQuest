@@ -29,7 +29,7 @@ const Details = ({ state, onClose }) => {
         </button>
         <div className="p-6 overflow-y-auto h-full">
           <div className="flex">
-            <div className="flex  justify-center mb-4 gap-4">
+            <div className="flex justify-center mb-4 gap-4">
                 <img
                 className="h-50 w-40 rounded-full object-cover object-center"
                 src={state.img[0]}

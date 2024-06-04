@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="text-slate-950 bg-transparent bg-blur-sm body-font cursor-pointer">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 className="title-font sm:text-6xl lg:text-8xl mb-2 font-medium text-slate-900 ">Welcome to IndiQuest</h1>
+          <h1 className="title-font sm:text-4xl lg:text-8xl mb-2 font-bold text-slate-900 ">Welcome to IndiQuest</h1>
           <p className="mb-4 lg:text-4xl leading-relaxed sm:text-2xl">Explore the beauty of India with us.</p>
           <span className='lg:text-xl sm:text-md text-slate-500'>We provide you with the best travel experience.</span>
           <div className="flex justify-center my-2">

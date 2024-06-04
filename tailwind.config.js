@@ -9,6 +9,9 @@ module.exports = withMT({
   ],
   
   theme: {
+    screen:{
+      'xxs': '540px'
+    },
     fontFamily: {
       'textFont':[ 'Outfit', 'sans-serif'],
     },
