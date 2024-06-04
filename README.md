@@ -15,5 +15,3 @@ With IndiQuest, you can:
 3. Immerse in Culture: India's cultural heritage is a treasure trove waiting to be explored. From ancient temples and colorful festivals to traditional art forms and contemporary innovations, IndiQuest takes you on a deep dive into the soul of India. Learn about the country's diverse religions, customs, and languages, and gain a deeper appreciation for the rich tapestry that makes India so unique.
 
 4. Plan Your Adventure: Whether you're planning a solo backpacking trip, a family vacation, or a luxury getaway, IndiQuest is your one-stop-shop for all things travel in India. Get personalized recommendations based on your interests, access practical information on visas, transportation, and accommodations, and connect with local experts and fellow travelers for advice and inspiration.
-
-At IndiQuest, we believe that travel is not just about ticking off a checklist of sights, but about immersing yourself in the essence of a place and its people. Our app is designed to be your trusted companion on this journey of discovery, helping you uncover the many layers of India's fascinating culture and create memories that will last a lifetime.

@@ -19,7 +19,7 @@ const Designer = () => {
 
   return (
     <div className='w-full h-full absolute -left-1/3 bottom-0 -z-10 opacity-50'>
-      <img ref={imageRef} src="/Designer.png" alt="mandala" />
+      <img ref={imageRef} src="/Designer.svg" alt="mandala" />
     </div>
   );
 };
