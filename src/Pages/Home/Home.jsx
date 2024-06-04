@@ -56,10 +56,10 @@ const Home = () => {
   return (
     <div>
       <Hero className='hero_section' />
-      <CarouselWithContent className=".carousel-section"/>
+      <CarouselWithContent className="carousel-section"/>
       <Testimonials />
-      <Content className=".content_section"/>
-      <Gallery className=".gallery"/>
+      <Content className="content_section"/>
+      <Gallery className="gallery"/>
       <Tour steps={tourSteps} defaultStepOptions={defaultStepOptions} />
     </div>
   )

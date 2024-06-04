@@ -1,4 +1,5 @@
 import React from 'react'
+import Font from '../Font/Font'
 
 
 const Hero = () => {

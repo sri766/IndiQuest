@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-// import CustomFontComponent from './components/Font/Font.jsx'
+import Font from './components/Font/Font.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-      <App />
+      <Font>
+        <App />
+      </Font>
     </BrowserRouter>
 )

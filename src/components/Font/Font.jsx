@@ -9,14 +9,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function CustomFontComponent({children}) {
+function Font({children}) {
   const classes = useStyles();
 
   return (
-    <Typography className={classes.customFont}>
+    <div className={classes.customFont}>
       {children}
-    </Typography>
+    </div>
   );
 }
 
-export default CustomFontComponent;
+export default Font;

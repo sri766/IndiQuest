@@ -21,11 +21,6 @@ const About = () => {
           </div>
           <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
             <p className="leading-relaxed justify text-lg mb-4">The motive behind IndiQuest is to celebrate and promote the understanding of India's rich cultural heritage and history. By providing comprehensive and accessible information, IndiQuest aims to educate people about India's diverse cultural traditions, historical milestones, and contemporary cultural landscape. The platform seeks to inspire curiosity and appreciation for India's unique cultural identity among individuals worldwide. Additionally, IndiQuest fosters a sense of community among those interested in Indian culture, history, and travel, while contributing to the preservation and dissemination of India's intangible cultural heritage.</p>
-            {/* <a className="text-pink-800 inline-flex items-center" href='https://srisanth.vercel.app/'>Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a> */}
           </div>
         </div>
       </div>
