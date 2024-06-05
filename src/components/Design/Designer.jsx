@@ -18,8 +18,8 @@ const Designer = () => {
   }, []);
 
   return (
-    <div className='absolute bottom-0 -z-10 lg:opacity-20 flex justify-center items-center lg:-left-1/3 md:bottom-auto md:top-0 md:opacity-20 -top-1/3 opacity-20'>
-      <img ref={imageRef} src="/Designer.svg" alt="mandala" />
+    <div className='absolute rounded-full bottom-0 -z-10 lg:opacity-20 flex justify-center items-center lg:-left-1/3 md:bottom-auto md:top-0 md:opacity-20 -top-1/3 opacity-20'>
+      <img ref={imageRef} src="/Design.svg" alt="mandala" />
     </div>
   );
 };
