@@ -1,5 +1,6 @@
 import React from 'react'
 import { Instagram, Twitter, Facebook, Linkedin } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 
 const Footer = () => {
@@ -12,7 +13,8 @@ const Footer = () => {
             <span className="ml-3 text-xl text-white">IndiQuest</span>
         </a>
         <p className="text-md text-white sm:ml-6 sm:mt-0 mt-4">© 2024 IndiQuest —
-            <a href="https://twitter.com/SrisanthSeth" rel="noopener noreferrer" className="text-gray-400 ml-1" target="_blank" previewlistener="true">Made with Love By Srisanth</a>
+            <a href="https://twitter.com/SrisanthSeth" rel="noopener noreferrer" className="text-gray-400 ml-1" target="_blank" previewlistener="true">
+              Made with<span><Heart size={24} className='inline m-2'/></span> By Srisanth</a>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a className="text-white">
