@@ -1,1 +1,0 @@
-const apiURL = 'api/v1/flights/searchAirport'

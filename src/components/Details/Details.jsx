@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { AirVent, History, UtensilsCrossed } from 'lucide-react';
+import Img from '../LazyLoading/Img';
 
 const truncateText = (text, length) => {
   return text.length > length ? `${text.substring(0, length)}...` : text;
@@ -34,8 +35,8 @@ const Details = ({ state, onClose }) => {
         </button>
         <div className="p-4 md:p-6 overflow-y-auto max-h-[80vh]">
           <div className="flex flex-col lg:flex-row md:flex-col items-center mb-4 gap-4">
-            <img
-              className="h-40 w-50 rounded-full object-cover object-center"
+            <Img
+              className="h-60 w-50 rounded-full object-cover object-center"
               src={state.img[0]}
               alt={state.name}
             />
@@ -95,7 +96,7 @@ const Details = ({ state, onClose }) => {
           <div className="places grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
             {state?.products?.map((product) => (
               <div key={product.name} className="flex flex-col items-center rounded-lg p-4">
-                <img src={product.image} alt={product.name} className="object-cover object-center w-16 h-16 md:w-20 md:h-20 rounded-full mb-2" />
+                <Img src={product.image} alt={product.name} className="object-cover object-center w-16 h-16 md:w-20 md:h-20 rounded-full mb-2" />
                 <p className="text-center text-gray-700">{product.name}</p>
                 <p className="text-center text-sm text-gray-500">{product.category}</p>
               </div>
@@ -106,7 +107,7 @@ const Details = ({ state, onClose }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {state.tourist.map((place) => (
                 <div key={place.name} className="flex flex-col items-start p-4 bg-white shadow-xl rounded-lg">
-                  <img src={place.images} alt={place.name} className="object-cover object-center w-full h-40 rounded mb-2" />
+                  <Img src={place.images} alt={place.name} className="object-cover object-center aspect-video rounded mb-2" />
                   <h4 className="text-xl text-gray-900 font-medium mb-1">{place.name}</h4>
                   <p className="text-sm text-gray-700 mb-1">
                     {showMore[place.name] ? place.info : truncateText(place.info, 100)}

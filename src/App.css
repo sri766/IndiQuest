@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+.video-container {
+  perspective: 1000px; /* Adjust the perspective distance for a more dramatic effect */
+}
+
+/* Define initial styles for the video container */
+.video-container {
+  transition: transform 0.2s ease;
+}
+
+
 /* .logo {
   height: 6em;
   padding: 1.5em;

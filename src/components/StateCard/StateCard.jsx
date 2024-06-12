@@ -1,5 +1,6 @@
 import React,{ useState } from 'react'
 import Details from '../Details/Details';
+import Img from '../LazyLoading/Img';
 
 const StateCard = ({state}) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -8,8 +9,8 @@ const StateCard = ({state}) => {
     <>
     <div className="p-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
       <div className="bg-white shadow-lg p-6 rounded-lg">
-        <img
-          className="h-40 rounded w-full object-cover object-center mb-6"
+        <Img
+          className={"h-40 rounded w-full aspect-video object-cover object-center mb-6"}
           src={state.img[0]}
           alt={state.name}
         />

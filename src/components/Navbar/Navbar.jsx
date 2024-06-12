@@ -23,7 +23,8 @@ const Navbar = () => {
           <span className="ml-3 text-4xl text-slate-950 xl:block lg:hidden">IndiQuest</span>
         </a>
         <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-          <button className="inline-flex text-white items-center bg-yellow-500 text-slate-50 border-0 py-2 px-6 focus:outline-none hover:bg-pink-700 text-xl mt-4 rounded-full md:mt-0">Explore
+          <button className="inline-flex text-white items-center bg-yellow-500 text-slate-50 border-0 py-2 px-6 focus:outline-none hover:bg-pink-700 text-xl mt-4 rounded-full md:mt-0"
+          onClick={()=>navigate('/explore')}>Explore
             <ArrowRight size={20}/>
           </button>
         </div>

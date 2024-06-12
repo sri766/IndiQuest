@@ -5,6 +5,7 @@ import CarouselWithContent from '../../components/Carousal/CarouselWithContent'
 import Gallery from '../../components/Gallery/Gallery'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Tour from '../../components/Tour/Tour'
+import VideoPlayer from '../../components/Video/VideoPlayer'
 
 const Home = () => {
 
@@ -58,9 +59,10 @@ const Home = () => {
       <Hero className='hero_section' />
       <CarouselWithContent className="carousel-section"/>
       <Testimonials />
+      <VideoPlayer />
       <Content className="content_section"/>
       <Gallery className="gallery"/>
-      <Tour steps={tourSteps} defaultStepOptions={defaultStepOptions} />
+      {/* <Tour steps={tourSteps} defaultStepOptions={defaultStepOptions} /> */}
     </div>
   )
 }

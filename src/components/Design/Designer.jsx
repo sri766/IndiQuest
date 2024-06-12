@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
+import Img from '../LazyLoading/Img';
 
 const Designer = () => {
   const imageRef = useRef(null);

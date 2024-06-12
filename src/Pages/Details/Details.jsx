@@ -16,7 +16,7 @@ const Details = ({state}) => {
           <X size={24} />
         </button>
         <div className="p-4 md:p-6 overflow-y-auto max-h-[80vh]">
-          <div className="flex flex-col lg:flex-row md:flex-row md:flex-col items-center mb-4 gap-4">
+          <div className="flex flex-col lg:flex-row sm:flex-row md:flex-col items-center mb-4 gap-4">
             <img
               className="h-40 w-50 rounded-full object-cover object-center"
               src={state.img[0]}
