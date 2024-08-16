@@ -17,7 +17,7 @@ const Footer = () => {
             <a href="https://twitter.com/SrisanthSeth" rel="noopener noreferrer" className="text-gray-400 ml-1" target="_blank" previewlistener="true">
               Made with<span><TiHeartFullOutline className='inline text-2xl'/></span> By Srisanth</a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start p-2">
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center items-center sm:justify-start p-2">
             <a href='https://www.instagram.com/sri_santh._/' className="text-white">
             <Instagram />
             </a>
@@ -30,8 +30,10 @@ const Footer = () => {
             <a href='https://www.linkedin.com/in/srisanth-seth-51b54b225/' className="ml-3 text-white">
             <Linkedin />
             </a>
+            <a href="https://www.buymeacoffee.com/srisanthsez">
+                <img src="/bmc-button.svg"  className='inline h-12 m-2' alt="buy me a coffee" />
+            </a>
         </span>
-        <a href="https://www.buymeacoffee.com/srisanthsez"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=srisanthsez&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
         </div>
     </div>
     </footer>

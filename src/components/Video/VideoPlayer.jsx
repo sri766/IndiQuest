@@ -5,6 +5,8 @@ const VideoPlayer = () => {
   const containerRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const [scrollYProgress, setScrollYProgress] = useState(0);
+  const [rotation, setRotation] = useState(0);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -28,6 +30,11 @@ const VideoPlayer = () => {
       const documentHeight = document.documentElement.scrollHeight - windowHeight;
       const progress = Math.min(scrollPosition / documentHeight, 1);
       setScrollYProgress(progress);
+
+      const maxRotation = 20; // Max rotation in degrees
+      const maxOpacity = 20; // Max opacity
+      setRotation(progress * maxRotation);
+      setOpacity(progress * maxOpacity);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -39,10 +46,13 @@ const VideoPlayer = () => {
   return (
     <div
       ref={containerRef}
-      className={`h-full w-full p-12 rounded-xl video-container border-4 overflow-hidden relative mx-auto shadow-xl bg-gray-900 border-gray-400`}
+      className="h-full w-full p-12 rounded-xl video-container border-4 overflow-hidden relative mx-auto shadow-xl bg-gray-900 border-gray-400"
       style={{
-        transform: `rotateZ(${1 * (1 - scrollYProgress)}deg)`,
-        transition: 'transform 0.1s ease-out',
+        transform: `translate3d(0px, 30%, 10px) scale3d(1, 1, 1) rotateX(${rotation}deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+        opacity: opacity,
+        transition: 'transform 0.1s, opacity 0.1s',
+        willChange: 'transform, opacity',
+        transformStyle: 'preserve-3d',
       }}
     >
       {loading && (
@@ -52,9 +62,10 @@ const VideoPlayer = () => {
       )}
       <video
         ref={videoRef}
-        muted
         autoPlay
+        controls
         loop
+        muted
         className={`w-full rounded-lg ${loading ? 'invisible' : 'visible'}`}
       >
         <source src="/video.mp4" type="video/mp4" />

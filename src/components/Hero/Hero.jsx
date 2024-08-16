@@ -1,9 +1,33 @@
 import React from 'react'
-import Font from '../Font/Font'
 import Img from '../LazyLoading/Img'
+import { useEffect,useState } from 'react'
+import { Carousel } from '@material-tailwind/react'
 
 
 const Hero = () => {
+  const [images,setImages] = useState({})
+
+  useEffect(()=>{
+    
+    const fetchImg = async () => {
+      try {
+        const response = await fetch(`https://api.pexels.com/v1/search?query=India`, {
+          headers: {
+            Authorization: '8IlMIHk7EQtoT5ZytOSoJ4twbQmuWCWNLpFqVpL4Vbhg9BKjw6JeKzEz'
+          }
+        });
+        const data = await response.json();
+        setImages(data.photos);
+        
+      } catch (error) {
+        console.log('Error fetching data:', error);
+      }
+    };
+
+    fetchImg();
+  },[]) 
+
+  console.log(images);
   
   return (
     <section className="text-slate-950 bg-transparent bg-blur-sm body-font cursor-pointer">

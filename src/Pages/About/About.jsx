@@ -7,12 +7,18 @@ const About = () => {
     <div className="container px-5 py-24 mx-auto flex flex-col">
       <div className="lg:w-4/6 mx-auto">
         <div className="rounded-lg h-64 overflow-hidden">
-          <Img alt="content" className="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+          <Img 
+          alt="content" 
+          className="object-cover object-center h-full w-full" 
+          src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
         </div>
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
             <div className="w-45 h-45 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-              <Img src='/sri.png' alt='author' className="overflow-hidden rounded-full shadow-lg"/>
+              <Img 
+                src='/sri.png' 
+                alt='author' 
+                className="overflow-hidden rounded-full shadow-lg object-cover object-center"/>
             </div>
             <div className="flex flex-col items-center text-center justify-center">
               <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">Srisanth Seth</h2>

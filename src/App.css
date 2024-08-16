@@ -5,48 +5,49 @@
   text-align: center;
 }
 
+/* Loader Styles */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 2rem 10rem;
+}
+
+.loader-logo {
+  height: 120px;
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.loader-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000; /* Dark color for the text */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Animation using GSAP */
+.gsap-logo {
+  transform-origin: center;
+}
+
 .video-container {
   perspective: 1000px; /* Adjust the perspective distance for a more dramatic effect */
+  transition: transform 0.1s ease;
 }
 
-/* Define initial styles for the video container */
-.video-container {
-  transition: transform 0.2s ease;
-}
-
-
-/* .logo {
+.logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .logo-spin {
+    animation: none; /* Disable CSS animation */
   }
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */ 
