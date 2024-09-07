@@ -63,7 +63,6 @@ const VideoPlayer = () => {
       <video
         ref={videoRef}
         autoPlay
-        controls
         loop
         muted
         className={`w-full rounded-lg ${loading ? 'invisible' : 'visible'}`}
